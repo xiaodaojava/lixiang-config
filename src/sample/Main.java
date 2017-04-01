@@ -10,8 +10,10 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
+        //加载资源文件,用于定义界面
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Hello World");
+        //整个窗体的设置
+        primaryStage.setTitle("WorldToImage");
         primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.show();
     }
