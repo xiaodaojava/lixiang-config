@@ -1,9 +1,11 @@
 package utils;
 
+import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.apache.poi.util.Units;
 import org.apache.poi.xwpf.usermodel.*;
 import org.openxmlformats.schemas.wordprocessingml.x2006.main.*;
 
-import java.io.FileOutputStream;
+import java.io.*;
 import java.math.BigInteger;
 
 /**
@@ -70,6 +72,16 @@ public class GenerateDoc {
 
         //插入二维码图片
         int format = XWPFDocument.PICTURE_TYPE_JPEG;
+        XWPFParagraph imagep= doc.createParagraph();
+        XWPFRun imagepRun = imagep.createRun();
+        InputStream inputStream = GenerateImage.class.getResourceAsStream("/wxbbgkh.jpg");
+        try {
+            imagepRun.addPicture(inputStream, format, "bbgkh.jpg", Units.toEMU(50), Units.toEMU(50)); // 200x200 pixels
+        } catch (InvalidFormatException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
 
         try{
@@ -79,9 +91,6 @@ public class GenerateDoc {
         }catch (Exception e){
             e.printStackTrace();
         }
-
-
-
 
     }
 }
