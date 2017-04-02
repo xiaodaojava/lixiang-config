@@ -58,14 +58,18 @@ public class GenerateDoc {
         //设置为粗体
         r1.setBold(true);
         //设置文字
-        r1.setText("The quick brown fox");
+        r1.setText("步步高裤行欢迎您");
 
         //r1.setBold(true);
         //设置字体
         r1.setFontFamily("Courier");
         //设置下划线
-        r1.setUnderline(UnderlinePatterns.DOT_DOT_DASH);
         r1.setFontSize(9);
+
+
+
+        //插入二维码图片
+        int format = XWPFDocument.PICTURE_TYPE_JPEG;
 
 
         try{
