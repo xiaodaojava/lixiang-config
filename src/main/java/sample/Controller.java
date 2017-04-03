@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import utils.GenerateDoc;
 
 public class Controller {
 
@@ -31,14 +32,23 @@ public class Controller {
     @FXML
     private Button submitPrint;
 
+    //提交入库
     @FXML
     private Button submitStock;
 
     @FXML
     private void submitPrintMethod(ActionEvent event){
         System.out.println("submitPrint has been clicked!!");
+        String sysNoText = sysNo.getText();
+        String priceText = price.getText();
+        String colorText = color.getText();
+        String sizeText = size.getText();
+        try {
+            GenerateDoc.createDoc(sysNoText,priceText,colorText,sizeText);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
-        System.out.println(price.getText());
     }
 
 }

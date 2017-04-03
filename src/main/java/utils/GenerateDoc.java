@@ -12,7 +12,7 @@ import java.math.BigInteger;
  * Created by lixiang on 02/04/2017.
  */
 public class GenerateDoc {
-    public static void main(String[] args) {
+    public static void createDoc(String sysNo , String price , String color , String size) {
         XWPFDocument doc = new XWPFDocument();
         CTDocument1 document = doc.getDocument();
         CTBody body = document.getBody();
@@ -68,15 +68,36 @@ public class GenerateDoc {
         //设置下划线
         r1.setFontSize(9);
 
+        //下面的货号，颜色，价格等用一个新的段落格式
+        XWPFParagraph p2 = doc.createParagraph();
+        p2.setIndentationLeft(1200);
+        XWPFRun r2 =p2.createRun();
+        r2.setText("货号："+sysNo);
+        r2.setFontSize(8);
+        r2.addCarriageReturn();
+        r2.setText("尺码："+size);
+        r2.addCarriageReturn();
+        r2.setText("颜色："+color);
+        r2.addCarriageReturn();
+        r2.setText("价格："+price);
 
 
-        //插入二维码图片
+
+
+        //插入二维码图片以及引导语
         int format = XWPFDocument.PICTURE_TYPE_JPEG;
         XWPFParagraph imagep= doc.createParagraph();
+
+        XWPFRun guideRun = imagep.createRun();
+        guideRun.setFontSize(6);
+        guideRun.setText("扫码关注我们微信公共号");
+
+        guideRun.setText("可获得更多优惠哦~");
         XWPFRun imagepRun = imagep.createRun();
+        imagepRun.setTextPosition(-20);
         InputStream inputStream = GenerateImage.class.getResourceAsStream("/wxbbgkh.jpg");
         try {
-            imagepRun.addPicture(inputStream, format, "bbgkh.jpg", Units.toEMU(50), Units.toEMU(50)); // 200x200 pixels
+            imagepRun.addPicture(inputStream, format, "bbgkh.jpg", Units.toEMU(40), Units.toEMU(40)); // 200x200 pixels
         } catch (InvalidFormatException e) {
             e.printStackTrace();
         } catch (IOException e) {
