@@ -4,7 +4,11 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import utils.FreeToWord;
 import utils.GenerateDoc;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class Controller {
 
@@ -43,8 +47,20 @@ public class Controller {
         String priceText = price.getText();
         String colorText = color.getText();
         String sizeText = size.getText();
+        String scanUrl = "http://m.admin.bbgkh.shop/sale/scanSale?" +
+                "price="+priceText
+                +"&sysNo="+sysNoText
+                +"&size="+sizeText
+                +"&color="+colorText;
+        Map<String,String> map = new HashMap<>();
+        map.put("sysNo",sysNoText);
+        map.put("price",priceText);
+        map.put("color",colorText);
+        map.put("size",sizeText);
+        map.put("scanUrl",scanUrl);
+
         try {
-            GenerateDoc.createDoc(sysNoText,priceText,colorText,sizeText);
+            FreeToWord.createDoc(map,"tag");
         } catch (Exception e) {
             e.printStackTrace();
         }
