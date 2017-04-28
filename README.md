@@ -12,6 +12,8 @@
 ## 技术 
 javaFX
 java8
+freemarker 生成word
+zxing 生成二维码
 
 ## 开发进度
 

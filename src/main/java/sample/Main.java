@@ -11,7 +11,6 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         //加载资源文件,用于定义界面
-        System.out.println(getClass().getResource("/").getPath());
         Parent root = FXMLLoader.load(getClass().getResource("/sample.fxml"));
         //整个窗体的设置
         primaryStage.setTitle("WorldToImage");

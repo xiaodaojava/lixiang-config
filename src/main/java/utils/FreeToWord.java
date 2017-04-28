@@ -39,7 +39,8 @@ public class FreeToWord {
 
     public static File createDoc(Map<String, String> dataMap, String type) {
 
-        String name = "temp" + (int) (Math.random() * 100000) + ".doc";
+        String fileName = dataMap.get("sysNo")+"-"+dataMap.get("size");
+        String name = fileName+ ".doc";
         File f = new File(name);
         Template t = allTemplates.get(type);
         try {
