@@ -9,8 +9,30 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Text?>
 
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.VBox?>
 <GridPane alignment="center" hgap="10" prefHeight="260.0" prefWidth="418.0" vgap="10" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1"
           fx:controller="sample.Controller">
+    <ScrollPane fx:id="sasd">
+        <content>
+            <VBox prefWidth="200" alignment="center" fx:id="Left">
+                <children>
+                    <Label alignment="center" fx:id="gcProgramLine" text="g0x100 y123 z23"/>
+                    <Label alignment="center" fx:id="gcProgramLine" text="g0x121 y13 z23"/>
+                    <Label alignment="center" fx:id="gcProgramLine" text="g0x10 y113 z23"/>
+                    <Label alignment="center" fx:id="gcProgramLine" text="g0x100 y123 z23"/>
+                    <Label alignment="center" fx:id="gcProgramLine" text="g0x100 y123 z23"/>
+                    <Label alignment="center" fx:id="gcProgramLine" text="g0x100 y123 z23"/>
+                    <Label alignment="center" fx:id="gcProgramLine" text="g0x100 y123 z23"/>
+                    <Label alignment="center" fx:id="gcProgramLine" text="g0x100 y123 z23"/>
+                    <Label alignment="center" fx:id="gcProgramLine" text="g0x121 y13 z23"/>
+                    <Label alignment="center" fx:id="gcProgramLine" text="g0x10 y113 z23"/>
+                    <Label alignment="center" fx:id="gcProgramLine" text="g0x100 y123 z23"/>
+                </children>
+            </VBox>
+        </content>
+    </ScrollPane>
+
     <padding>
         <Insets bottom="10" left="25" right="25" top="25">
 
