@@ -26,6 +26,7 @@ public class GenerateQrcode {
         OutputStream out = null;
         MultiFormatWriter multiFormatWriter = new MultiFormatWriter();
         Map hints = new HashMap();
+        
         // 设置编码方式
         hints.put(EncodeHintType.CHARACTER_SET, "UTF-8");
         // 设置QR二维码的纠错级别（H为最高级别）具体级别信息
