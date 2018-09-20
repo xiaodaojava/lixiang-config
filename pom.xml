@@ -4,76 +4,18 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.bbgkh</groupId>
-    <artifactId>wordToImage</artifactId>
+    <groupId>red.lixiang</groupId>
+    <artifactId>java-utils</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
 
-        <JAVA_VERSION>1.8</JAVA_VERSION>
+        <JAVA_VERSION>10</JAVA_VERSION>
         <ENCODING>UTF-8</ENCODING>
         <COMPILE_PLUGIN_VERSION>3.1</COMPILE_PLUGIN_VERSION>
     </properties>
 
-
     <dependencies>
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi-ooxml</artifactId>
-            <version>3.15</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>poi-scratchpad</artifactId>
-            <version>3.15</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.poi</groupId>
-            <artifactId>ooxml-schemas</artifactId>
-            <version>1.3</version>
-        </dependency>
-
-
-        <dependency>
-            <groupId>org.freemarker</groupId>
-            <artifactId>freemarker</artifactId>
-            <version>2.3.23</version>
-        </dependency>
-
-
-        <!--<dependency>-->
-            <!--<groupId>net.sf.jacob-project</groupId>-->
-            <!--<artifactId>jacob</artifactId>-->
-            <!--<version>1.18</version>-->
-            <!--<scope>system</scope>-->
-            <!--<systemPath>C:/jacob-1.18/jacob-1.18.jar</systemPath>-->
-        <!--</dependency>-->
-
-        <!--引入生成二维码的包-->
-
-        <dependency>
-            <groupId>com.google.zxing</groupId>
-            <artifactId>core</artifactId>
-            <version>3.3.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.google.zxing</groupId>
-            <artifactId>javase</artifactId>
-            <version>3.3.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.apache.pdfbox</groupId>
-            <artifactId>pdfbox</artifactId>
-            <version>2.0.4</version>
-        </dependency>
-
-
-
-
     </dependencies>
     <build>
         <plugins>
