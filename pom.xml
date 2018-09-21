@@ -10,12 +10,17 @@
 
     <properties>
 
-        <JAVA_VERSION>10</JAVA_VERSION>
+        <JAVA_VERSION>11</JAVA_VERSION>
         <ENCODING>UTF-8</ENCODING>
-        <COMPILE_PLUGIN_VERSION>3.1</COMPILE_PLUGIN_VERSION>
+        <COMPILE_PLUGIN_VERSION>3.8.0</COMPILE_PLUGIN_VERSION>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>11</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -41,6 +46,21 @@
                     <!--</descriptorRefs>-->
                 <!--</configuration>-->
             <!--</plugin>-->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.2.1</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <mainClass>HelloFX</mainClass>
+                </configuration>
+            </plugin>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
