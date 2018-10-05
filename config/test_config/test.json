@@ -1,0 +1,24 @@
+{
+    "property2Bean": {
+        "BIGINT UNSIGNED": "Long",
+        "DATETIME": "Date",
+        "TIMESTAMP": "Date",
+        "VARCHAR": "String",
+        "DECIMAL": "BigDecimal",
+        "BIGINT": "Long",
+        "TEXT": "String",
+        "TINYINT": "Integer",
+        "INT": "Integer"
+    },
+    "property2Result": {
+        "BIGINT UNSIGNED": "BIGINT",
+        "DATETIME": "TIMESTAMP",
+        "TIMESTAMP": "TIMESTAMP",
+        "VARCHAR": "VARCHAR",
+        "DECIMAL": "DECIMAL",
+        "BIGINT": "BIGINT",
+        "TEXT": "VARCHAR",
+        "TINYINT": "TINYINT",
+        "INT": "INTEGER"
+    }
+}
