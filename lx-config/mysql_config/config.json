@@ -8,7 +8,8 @@
         "BIGINT": "Long",
         "TEXT": "String",
         "TINYINT": "Integer",
-        "INT": "Integer"
+        "INT": "Integer",
+        "BIT": "Integer",
     },
     "property2Result": {
         "BIGINT UNSIGNED": "BIGINT",
@@ -19,6 +20,7 @@
         "BIGINT": "BIGINT",
         "TEXT": "VARCHAR",
         "TINYINT": "TINYINT",
-        "INT": "INTEGER"
+        "INT": "INTEGER",
+        "BIT": "BIT"
     }
 }
